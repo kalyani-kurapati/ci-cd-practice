@@ -10,7 +10,7 @@ jobs:
    - name: checkout repository
      uses: actions/checkout@v4
    - name: print welcome message
-     run: echo"Welcome to ci-cd pipeline"
+     run: echo "Welcome to ci-cd pipeline"
    - name: show current directory
      run: pwd
    - name: list files
@@ -25,4 +25,3 @@ jobs:
      run: echo "ci-cd pipeline completed successfully"
  
  
-
