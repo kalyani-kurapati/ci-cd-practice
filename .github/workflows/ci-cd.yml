@@ -9,7 +9,7 @@ jobs:
   steps:
    - name: checkout repository
      uses: actions/checkout@v4
-   - name: print welcome message
+   - name: print welcome message.
    - run: echo "starting  ci-cd pipeline
    - name: show current directory
    - run: pwd
