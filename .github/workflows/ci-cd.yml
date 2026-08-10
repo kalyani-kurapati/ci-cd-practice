@@ -9,20 +9,20 @@ jobs:
   steps:
    - name: checkout repository
      uses: actions/checkout@v4
-   - name: print welcome message.
-   - run: echo "starting  ci-cd pipeline
+   - name: print welcome message
+     run: echo"Welcome to ci-cd pipeline"
    - name: show current directory
-   - run: pwd
+     run: pwd
    - name: list files
-   - run: ls -la
+     run: ls -la
    - name: start building application
-   - run: echo "build application..."
+     run: echo "build application..."
    - name: run tests
-   - run: echo "running application..."
+     run: echo "running application..."
    - name: deploy the application  
-   - run: echo "deploying the application..."
+     run: echo "deploying the application..."
    - name: completed
-   - run: echo "ci-cd pipeline completed successfully"
+     run: echo "ci-cd pipeline completed successfully"
  
  
 
