@@ -1,16 +1,16 @@
 name: ci-cd practice
 on:
  push:
- branches:
- - main
+  branches:
+   - main
 jobs: 
  practices:
   runs-on: ubuntu-latest
   steps:
   - uses: actions/checkout@v4
   - run: echo "starting build"
-  - run: echo: "running tests"
-  - run: echo: "ci-cd practice commpleted successfully"
+  - run: echo "running tests"
+  - run: echo "ci-cd practice commpleted successfully"
  
  
 
