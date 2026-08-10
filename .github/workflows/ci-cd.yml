@@ -1,16 +1,28 @@
-name: ci-cd practice
+name: ci-cd pipeline
 on:
  push:
   branches:
-   - main
-jobs: 
- practices:
+  - main
+jobs:
+ pipeline:
   runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v4
-  - run: echo "starting build"
-  - run: echo "running tests"
-  - run: echo "ci-cd practice commpleted successfully"
+steps:
+ - name: actions/checkout@v4
+ - uses: checkoutRepository
+ - name: print "welcome message"
+ - run: echo "starting  ci-cd pipeline"
+ - name: show current directory
+ - run: pwd
+ - name: list files
+ - run: ls -la
+ - name: start building application
+ - run: echo "build application..."
+ - name: run tests
+ - run: echo "running application..."
+ - name: deploy the application  
+ - run: echo "deploying the application..."
+ - name: completed
+ - run: echo "ci-cd pipeline completed successfully"
  
  
 
