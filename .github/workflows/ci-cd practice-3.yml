@@ -1,0 +1,16 @@
+name: my ci 
+on:
+ push:
+jobs:
+ practice:
+  runs-on: ubuntu-latest
+  steps:
+   - name: chekout code
+     uses: actions/checkout@v4
+   - name: starting myci
+     run: echo "starting myci workflow"
+   - name: running tests
+     run: echo "running tests"
+   - name: deploying application
+     run: echo "deploying the application"
+ 
