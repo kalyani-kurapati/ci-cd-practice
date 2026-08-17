@@ -1,6 +1,8 @@
 name: my ci 
 on:
  push:
+env: 
+ APP_Name: MyApplication
 jobs:
  practice:
   runs-on: ubuntu-latest
