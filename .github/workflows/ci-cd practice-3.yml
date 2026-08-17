@@ -8,7 +8,7 @@ jobs:
    - name: chekout code
      uses: actions/checkout@v4
    - name: starting myci
-     run: ech "starting myci workflow"
+     run: echo "starting myci workflow"
    - name: running tests
      run: echo "running tests"
    - name: deploying application
