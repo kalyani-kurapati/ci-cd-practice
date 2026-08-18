@@ -1,0 +1,25 @@
+name: Dependencies practice
+on:
+ push:
+ workflow-dispatch:
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Build application
+     run: echo "Building application"
+ test:
+   needs: Build
+   runs-on: ubuntu-latest
+   steps:
+    - name: Run tests
+      run: echo "Running tests"
+   Deploy:
+   needs: Build
+   runs-on: ubuntu-latest
+  steps:
+   - name: Deploy application
+     run: echo "Deploying application"
+
+ 
+ 
