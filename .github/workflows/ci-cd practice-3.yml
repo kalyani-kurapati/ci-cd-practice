@@ -9,6 +9,8 @@ jobs:
   steps:
    - name: chekout code
      uses: actions/checkout@v4
+   - name: starting "Building Appliction"
+   - run: echo "Building $APP_NAME
    - name: starting myci
      run: echo "starting myci workflow"
    - name: running tests
