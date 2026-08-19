@@ -7,19 +7,24 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Build application
-    run: echo "Building application"
+    run: echo "Building application..."
   test:
     needs: build
     runs-on: ubuntu-latest
-  steps: 
-   - name: Run tests
-     run: echo "Running application"
-  deploy:
+    steps: 
+    - name: build application
+      run: echo "building application"
+  security:
     needs: build
     runs-on: ubuntu-latest
-    steps: 
-    - name: Deploy application
-      run: echo: "Deploying application"
-
- 
- 
+    steps:
+    - name: Run security scan
+      run: echo "Running security scaning..."
+  deploy: 
+    needs: [test,security]
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploy application
+      run: echo "Deploying application..."
+   
+     
