@@ -33,6 +33,14 @@ jobs:
    steps: 
    - name: success message
      run: echo "deploying completed successfully!"
+  failure- handler:
+   needs: deploy
+   if: faillure
+   runs-on: ubuntu-latest
+   steps:
+   - name: failure message
+     run: echo " something went wrong"
+  
  
    
      
