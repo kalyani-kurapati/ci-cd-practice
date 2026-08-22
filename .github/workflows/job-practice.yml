@@ -26,5 +26,13 @@ jobs:
     steps:
     - name: deploy application
       run: echo "Deploying application..."
+  notify:
+   needs: deploy
+   if: success()
+   runs-on: ubuntu-latest
+   steps: 
+   - name: success message
+     run: echo "deploying completed successfully!"
+ 
    
      
