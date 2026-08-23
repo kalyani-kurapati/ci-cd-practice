@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - name: build application
+      continue-on-error: true
       run: echo "building application"
   security:
     needs: build
