@@ -12,9 +12,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps: 
-    - name: build application
+    - name: run tests
       continue-on-error: true
-      run: echo "building application"
+      run: exit 1
   security:
     needs: build
     runs-on: ubuntu-latest
