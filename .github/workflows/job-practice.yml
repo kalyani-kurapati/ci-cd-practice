@@ -15,6 +15,9 @@ jobs:
     - name: run tests
       continue-on-error: true
       run: exit 1
+    - name: handle test fail
+       if: failure
+       run: the test step fail
   security:
     needs: build
     runs-on: ubuntu-latest
