@@ -9,7 +9,10 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: Use secret
-     run: echo"MYsecret is ${{secrets.MY_secret}}"
+     run: echo"MYsecret is $
+ {{secrets.MY_secret}}"
+    - name: build application
+      run: echo"building$APP_NAME..."
   test:
     needs: build
     runs-on: ubuntu-latest
