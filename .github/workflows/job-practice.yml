@@ -10,6 +10,9 @@ jobs:
   steps:
   - name: Build application
     run: echo "Building $APP_NAME..."
+  - name: Use secret
+    run: echo "MYsecret is $
+    {{secrets.MY_secret}}"
   test:
     needs: build
     runs-on: ubuntu-latest
