@@ -11,8 +11,7 @@ jobs:
   - name: Build application
     run: echo "Building $APP_NAME..."
   - name: Use secret
-    run: echo "MYsecret is $
-    {{secrets.MY_secret}}"
+    run: echo"MYsecret is ${{secrets.MY_secret}}"
   test:
     needs: build
     runs-on: ubuntu-latest
@@ -21,8 +20,8 @@ jobs:
       continue-on-error: true
       run: exit 1
     - name: handle test fail
-       if: failure
-       run: the test step fail
+      if: failure
+      run: the test step fail
   security:
     needs: build
     runs-on: ubuntu-latest
