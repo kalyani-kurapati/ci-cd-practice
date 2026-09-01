@@ -3,13 +3,13 @@ on:
  push:
  workflow_dispatch:
 env:
- app_name: my application
+ APP_NAME: my application
 jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-  - name: Use secret
-    run: echo"MYsecret is ${{secrets.MY_secret}}"
+   - name: Use secret
+     run: echo"MYsecret is ${{secrets.MY_secret}}"
   test:
     needs: build
     runs-on: ubuntu-latest
